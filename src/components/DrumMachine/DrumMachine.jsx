@@ -6,6 +6,7 @@ import styles from './DrumMachine.module.css'
 const DrumMachine = () => {
   const [soundGroup, setSoundGroup] = useState('first')
   const [display, setDisplay] = useState('No play yet')
+  const [volume, setVolume] = useState(0.5)
 
   const handleSetDisplay = (newDisplay) => {
     setDisplay(newDisplay)
@@ -15,13 +16,23 @@ const DrumMachine = () => {
     soundGroup === 'first' ? setSoundGroup('second') : setSoundGroup('first')
   }
 
+  const handleSetVolume = (newVolume) => {
+    setVolume(newVolume)
+  }
+
   return (
     <main id="drum-machine" className={styles.drumMachine}>
-      <DrumPad soundGroup={soundGroup} handleSetDisplay={handleSetDisplay} />
+      <DrumPad
+        soundGroup={soundGroup}
+        volume={volume}
+        handleSetDisplay={handleSetDisplay}
+      />
       <LateralPanel
         display={display}
-        handleSetSoundGroup={handleSetSoundGroup}
         soundGroup={soundGroup}
+        volume={volume}
+        handleSetSoundGroup={handleSetSoundGroup}
+        handleSetVolume={handleSetVolume}
       />
     </main>
   )
