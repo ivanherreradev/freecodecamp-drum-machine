@@ -1,8 +1,17 @@
 import React from 'react'
+import { firstSoundsGroup, secondSoundsGroup } from '../../utils/sounds/sounds'
+import Pad from './components/Pad/Pad'
 
-const DrumPad = () => {
+const DrumPad = ({ soundsGroup }) => {
+  const currentSoundGroup =
+    soundsGroup === 'first' ? firstSoundsGroup : secondSoundsGroup
+
   return (
-    <div>DrumPad</div>
+    <section id="drum-pads">
+      {currentSoundGroup.map((sound) => (
+        <Pad key={sound.key} sound={sound} />
+      ))}
+    </section>
   )
 }
 
