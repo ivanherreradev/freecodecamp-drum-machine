@@ -3,9 +3,9 @@ import Pad from './components/Pad/Pad'
 import { firstSoundsGroup, secondSoundsGroup } from '../../utils/sounds/sounds'
 import styles from './DrumPad.module.css'
 
-const DrumPad = ({ soundsGroup, handleSetDisplay }) => {
+const DrumPad = ({ soundGroup, handleSetDisplay }) => {
   const currentSoundGroup =
-    soundsGroup === 'first' ? firstSoundsGroup : secondSoundsGroup
+    soundGroup === 'first' ? firstSoundsGroup : secondSoundsGroup
 
   return (
     <section id="drum-pads" className={styles.drumPad}>
