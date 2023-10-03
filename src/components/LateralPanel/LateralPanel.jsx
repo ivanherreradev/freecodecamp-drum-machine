@@ -1,8 +1,11 @@
 import React from 'react'
+import Display from './components/Display/Display'
 
-const LateralPanel = () => {
+const LateralPanel = ({ display }) => {
   return (
-    <div>LateralPanel</div>
+    <aside>
+      <Display currentMessage={display}/>
+    </aside>
   )
 }
 
