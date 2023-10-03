@@ -1,9 +1,10 @@
 import React from 'react'
 import Toggle from '../../../Toggle/Toggle'
+import styles from './SoundGroupSelector.module.css'
 
 const SoundGroupSelector = ({ handleSetSoundGroup, soundGroup }) => {
   return (
-    <div className="sound-group-selector">
+    <div className={styles.soundGroupSelector}>
       <label>Change Sound Group</label>
       <Toggle
         id={'sound-group'}
