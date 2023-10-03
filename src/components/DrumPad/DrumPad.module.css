@@ -1,0 +1,6 @@
+.drumPad {
+  display: grid;
+  width: 200px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
