@@ -11,10 +11,18 @@ const DrumMachine = () => {
     setDisplay(newDisplay)
   }
 
+  const handleSetSoundGroup = () => {
+    soundGroup === 'first' ? setSoundGroup('second') : setSoundGroup('first')
+  }
+
   return (
     <main id="drum-machine" className={styles.drumMachine}>
       <DrumPad soundGroup={soundGroup} handleSetDisplay={handleSetDisplay} />
-      <LateralPanel display={display}/>
+      <LateralPanel
+        display={display}
+        handleSetSoundGroup={handleSetSoundGroup}
+        soundGroup={soundGroup}
+      />
     </main>
   )
 }
