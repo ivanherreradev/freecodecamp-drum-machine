@@ -1,8 +1,37 @@
-# React + Vite
+# Drum Machine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Drum Machine](./public/screenshot/screenshot.png)
 
-Currently, two official plugins are available:
+This is a project developed as part of the FreeCodeCamp certification. The aim of this project is to create an application that simulates a drum machine and meets the following user story criteria:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## User Stories
+
+1. I should be able to see an outer container with a corresponding id="drum-machine" that contains all other elements.
+2. Within #drum-machine I can see an element with a corresponding id="display".
+3. Within #drum-machine I can see 9 clickable drum pad elements, each with a class name of drum-pad, a unique id that describes the audio clip the drum pad will be set up to trigger, and an inner text that corresponds to one of the following keys on the keyboard: Q, W, E, A, S, D, Z, X, C. The drum pads MUST be in this order.
+4. Within each .drum-pad, there should be an HTML5 audio element which has a src attribute pointing to an audio clip, a class name of clip, and an id corresponding to the inner text of its parent .drum-pad (e.g. id="Q", id="W", id="E" etc.).
+5. When I click on a .drum-pad element, the audio clip contained in its child audio element should be triggered.
+6. When I press the trigger key associated with each .drum-pad, the audio clip contained in its child audio element should be triggered (e.g. pressing the Q key should trigger the drum pad which contains the string Q, pressing the W key should trigger the drum pad which contains the string W, etc.).
+7. When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique).
+
+## Technologies Used
+
+- React
+- CSS Modules
+- JavaScript
+
+## Additional Features
+
+In addition to the functionalities required by FreeCodeCamp, two additional features have been added:
+
+1. **Change the sound group**: by means of a switch it is possible to change the group of sounds played by the drum machine.
+
+2. **Volume**: has a slider that allows you to adjust the sound of the application.
+
+3. **Mute**: also by means of a switch we can mute the application.
+
+## How to Run the Project
+
+You can run the project by following this link: [Project Link](https://freecodecamp-drum-machine-phi.vercel.app/)
+
+I hope you enjoy the experience of our Drum Machine!
