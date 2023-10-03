@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './VolumeControl.module.css'
 
 const VolumeControl = ({ volume, handleSetVolume }) => {
   const currentVolume = volume * 100
@@ -9,10 +10,10 @@ const VolumeControl = ({ volume, handleSetVolume }) => {
   }
 
   return (
-    <div className="container">
-      <label>Volume</label>
-      <div className="wrapper">
-        <i className="uil-volume-mute" id="icon"></i>
+    <div className={styles.volumeControl}>
+      <label>Volume: {currentVolume}</label>
+      <div className={styles.wrapper}>
+        <i className="uil-volume-mute" id="icon" />
         <input
           type="range"
           min="0"
@@ -21,7 +22,6 @@ const VolumeControl = ({ volume, handleSetVolume }) => {
           value={volume}
           onChange={handleVolumeChange}
         />
-        <span className="slide-value">{currentVolume}</span>
       </div>
     </div>
   )
