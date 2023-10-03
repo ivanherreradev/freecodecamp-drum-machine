@@ -3,7 +3,7 @@ import Pad from './components/Pad/Pad'
 import { firstSoundsGroup, secondSoundsGroup } from '../../utils/sounds/sounds'
 import styles from './DrumPad.module.css'
 
-const DrumPad = ({ soundGroup, volume, handleSetDisplay }) => {
+const DrumPad = ({ soundGroup, volume, isMuted, handleSetDisplay }) => {
   const currentSoundGroup =
     soundGroup === 'first' ? firstSoundsGroup : secondSoundsGroup
 
@@ -14,6 +14,7 @@ const DrumPad = ({ soundGroup, volume, handleSetDisplay }) => {
           key={sound.key}
           sound={sound}
           volume={volume}
+          isMuted={isMuted}
           handleSetDisplay={handleSetDisplay}
         />
       ))}
