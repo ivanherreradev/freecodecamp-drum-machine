@@ -1,11 +1,12 @@
 import React from 'react'
+import DrumMachine from './components/DrumMachine/DrumMachine'
 import './App.css'
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello World 👋</h1>
-    </div>
+    <>
+      <DrumMachine/>
+    </>
   )
 }
 
