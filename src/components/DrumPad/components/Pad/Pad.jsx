@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { playAudio } from '../../../../utils/helper/playAudio'
+import styles from './Pad.module.css'
 
 const Pad = ({ sound, handleSetDisplay }) => {
   const handleKeyDown = (event) => {
@@ -17,7 +18,7 @@ const Pad = ({ sound, handleSetDisplay }) => {
 
   return (
     <div
-      className="drum-pad"
+      className={`${styles.pad} drum-pad`}
       id={sound.id}
       onClick={() => playAudio(sound, handleSetDisplay)}
     >
